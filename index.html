@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Wheel Game</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>
+          Spin the Wheel.<br /><span class="accent"> Let Fate Decide.</span>
+        </h1>
+        <p>
+          A powerful desktop wheel game that helps you make decisions, run
+          giveaways, or just have fun — all with one satisfying spin.
+        </p>
+        <button class="btn btn-primary" id="explore-btn">
+          Explore Features
+        </button>
+      </div>
+      <div class="hero-wave"></div>
+    </section>
+    <!-- Features -->
+    <section class="features" id="features">
+      <div class="container">
+        <h2>Create Your Own Wheel</h2>
+        <textarea
+          id="optionsInput"
+          placeholder="Enter one option per line..."
+        ></textarea>
+        <br />
+        <button class="btn btn-secondary" id="createBtn">Play Now</button>
+      </div>
+    </section>
+    <!-- Wheel -->
+    <section class="wheel-section" id="wheelSection">
+      <div class="wheel-container">
+        <div class="pointer"></div>
+        <canvas id="wheel" width="500" height="500"></canvas>
+      </div>
+      <button class="btn btn-secondary" id="spinBtn">Spin the Wheel</button>
+      <div class="result" id="result"></div>
+    </section>
+
+    <script src="scripts.js"></script>
+  </body>
+</html>
