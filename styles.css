@@ -40,6 +40,8 @@
   --white: #ffffff;
   --white-soft: rgba(255, 255, 255, 0.6);
   --white-muted: #e0e7ff;
+
+  --transition-base: all 0.25s ease;
 }
 
 * {
@@ -152,6 +154,7 @@ section {
   border: none;
   font-size: 1rem;
   cursor: pointer;
+  transition: var(--transition-base);
 }
 
 .btn-primary {
@@ -239,6 +242,7 @@ textarea {
   resize: none;
   font-size: 1rem;
   margin-bottom: 3rem;
+  transition: var(--transition-base);
 }
 textarea:focus {
   outline: none;
@@ -257,8 +261,23 @@ textarea::placeholder {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: var(--zinc-300);
+
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(99, 102, 241, 0.15),
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 80% 80%,
+      rgba(0, 166, 244, 0.15),
+      transparent 40%
+    ),
+    linear-gradient(135deg, #eef2ff, #f8fafc);
+  background-size: 200% 200%;
+  animation: gradientShift 15s ease infinite;
 }
+
 .wheel-section.active {
   display: flex;
 }
