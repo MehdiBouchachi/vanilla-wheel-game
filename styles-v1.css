@@ -1,47 +1,3 @@
-:root {
-  /* Slate / Base */
-  --slate-50: #f8fafc;
-  --slate-200: #e2e8f0;
-  --slate-800: #1d293d;
-  --slate-900: rgba(15, 23, 42, 0.12);
-
-  /* Indigo */
-  --indigo-400: #7c86ff;
-  --indigo-500: #615fff;
-  --indigo-700: #4f39f6;
-  --indigo-800: #432dd7;
-  --indigo-200: #c6d2ff;
-
-  /* Purple */
-  --purple-600: #7f22fe;
-  --purple-400: #ed6aff;
-
-  /* Sky */
-  --sky-500: #00a6f4;
-  --sky-200: #b8e6fe;
-  --sky-100: #c6d2ff;
-  --sky-50: #f0f9ff;
-
-  /* Orange */
-  --orange-500: #ff6900;
-  --orange-400: #ff8904;
-  --orange-700: #ca3500;
-  --orange-glow: rgba(249, 115, 22, 0.35);
-  --orange-glow-hover: rgba(249, 115, 22, 0.45);
-
-  /* Zinc */
-  --zinc-800: #27272a;
-  --zinc-900: #18181b;
-  --zinc-500: #71717b;
-  --zinc-300: #d4d4d8;
-  --zinc-50: #fafafa;
-
-  /* Neutral */
-  --white: #ffffff;
-  --white-soft: rgba(255, 255, 255, 0.6);
-  --white-muted: #e0e7ff;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -50,8 +6,8 @@
 
 body {
   font-family: "Plus Jakarta Sans", sans-serif;
-  background: var(--slate-50);
-  color: var(--slate-800);
+  background: #f8fafc;
+  color: #1d293d;
   overflow-x: hidden;
 }
 
@@ -72,7 +28,7 @@ section {
   position: relative;
   overflow: hidden;
   padding: 8rem 2rem 6rem 2rem;
-  background: linear-gradient(135deg, var(--purple-600), var(--sky-500));
+  background: linear-gradient(135deg, #7f22fe, #00a6f4);
   background-size: 200% 200%;
   animation: gradientShift 10s ease infinite;
 }
@@ -95,7 +51,7 @@ section {
   left: -200px;
   width: 600px;
   height: 600px;
-  background: var(--purple-400);
+  background: #ed6aff;
   background-size: 200% 200%;
   filter: blur(120px);
   border-radius: 50%;
@@ -108,7 +64,7 @@ section {
   right: -150px;
   width: 500px;
   height: 500px;
-  background: var(--white);
+  background: #ffffff;
   opacity: 0.04;
   filter: blur(100px);
   border-radius: 50%;
@@ -121,7 +77,7 @@ section {
 
 .hero h1 {
   font-size: 4.4rem;
-  color: var(--white);
+  color: #fff;
   line-height: 1.2;
   font-weight: 800;
   letter-spacing: -1.5px;
@@ -129,7 +85,7 @@ section {
 }
 
 .hero h1 .accent {
-  background: linear-gradient(135deg, var(--white), var(--sky-50));
+  background: linear-gradient(135deg, #ffffff, #f0f9ff);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -141,7 +97,7 @@ section {
   font-weight: 500;
   min-width: 640px;
   line-height: 1.6;
-  color: var(--white-muted);
+  color: #e0e7ff;
   margin: 0 auto 2rem auto;
 }
 
@@ -155,40 +111,41 @@ section {
 }
 
 .btn-primary {
-  color: var(--white);
-  background: linear-gradient(135deg, var(--orange-500), var(--orange-400));
+  color: #fff;
+  background: linear-gradient(135deg, #ff6900, #ff8904);
   box-shadow:
-    0 8px 0 var(--orange-700),
-    0 18px 30px var(--orange-glow);
+    0 8px 0 #ca3500,
+    0 18px 30px rgba(249, 115, 22, 0.35);
 }
 .btn-primary:hover {
-  background: linear-gradient(135deg, var(--orange-400), var(--orange-500));
+  background: linear-gradient(135deg, #ff8904, #ff6900);
   box-shadow:
-    0 8px 0 var(--orange-700),
-    0 22px 40px var(--orange-glow-hover);
-  transform: translateY(-3px);
+    0 8px 0 #ca3500,
+    0 22px 40px rgba(249, 115, 22, 0.45);
+  transform: translateY(-2px);
 }
 
 .btn-primary:active {
-  background: linear-gradient(135deg, var(--orange-500), var(--orange-400));
+  background: linear-gradient(135deg, #ff6900, #ff8904);
   transform: translateY(4px);
-  box-shadow: 0 3px 0 var(--orange-700);
+  box-shadow: 0 3px 0 #ca3500;
 }
 
-/* btn 2 */
+/* btn 22 */
 .btn-secondary {
-  color: var(--white);
-  background: linear-gradient(135deg, var(--indigo-500), var(--indigo-400));
-  box-shadow: 0 8px 0 var(--indigo-800);
+  color: #fff;
+  background: linear-gradient(135deg, #615fff, #7c86ff);
+  box-shadow: 0 8px 0 #432dd7;
 }
 .btn-secondary:hover {
-  box-shadow: 0 8px 0 var(--indigo-800);
-  transform: translateY(-3px);
+  box-shadow: 0 8px 0 #432dd7;
+
+  transform: translateY(-2px);
 }
 
 .btn-secondary:active {
   transform: translateY(4px);
-  box-shadow: 0 3px 0 var(--indigo-800);
+  box-shadow: 0 3px 0 #432dd7;
 }
 
 .hero-wave {
@@ -197,7 +154,7 @@ section {
   left: 0;
   width: 100%;
   height: 100px;
-  background: var(--white);
+  background: #f8fafc;
   border-top-left-radius: 60% 100%;
   border-top-right-radius: 60% 100%;
   z-index: 1;
@@ -205,7 +162,7 @@ section {
 
 .features {
   position: relative;
-  background: var(--zinc-800);
+  background: #27272a;
   min-height: 100vh;
   padding: 2rem;
   display: flex;
@@ -223,7 +180,7 @@ section {
 .features h2 {
   font-size: 2.5rem;
   font-weight: 700;
-  color: var(--zinc-50);
+  color: #fafafa;
   margin-bottom: 3rem;
   letter-spacing: -0.5px;
 }
@@ -231,22 +188,22 @@ section {
 textarea {
   width: 100%;
   height: 200px;
-  background: var(--zinc-900);
-  border: 1px solid var(--zinc-800);
+  background: #18181b;
+  border: 1px solid #27272a;
   border-radius: 8px;
   padding: 1.2rem 1.3rem;
-  color: var(--slate-200);
+  color: #e2e8f0;
   resize: none;
   font-size: 1rem;
   margin-bottom: 3rem;
 }
 textarea:focus {
   outline: none;
-  border-color: var(--indigo-500);
+  border-color: #615fff;
 }
 
 textarea::placeholder {
-  color: var(--zinc-500);
+  color: #71717b;
 }
 
 .wheel-section {
@@ -257,7 +214,7 @@ textarea::placeholder {
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  background: var(--zinc-300);
+  background: #d4d4d8;
 }
 .wheel-section.active {
   display: flex;
@@ -267,7 +224,7 @@ textarea::placeholder {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: var(--indigo-200);
+  background: #c6d2ff;
   filter: blur(140px);
   opacity: 0.15;
   top: -150px;
@@ -281,7 +238,7 @@ textarea::placeholder {
   position: absolute;
   width: 500px;
   height: 500px;
-  background: var(--sky-200);
+  background: #b8e6fe;
   filter: blur(120px);
   opacity: 0.1;
   bottom: -150px;
@@ -303,7 +260,7 @@ canvas {
   width: 460px;
   height: 460px;
   border-radius: 50%;
-  background: var(--slate-50);
+  background: #f8fafc;
   box-shadow:
     0 25px 70px rgba(15, 23, 42, 0.12),
     0 0 0 10px rgba(255, 255, 255, 0.6);
@@ -318,7 +275,8 @@ canvas {
   height: 0;
   border-left: 18px solid transparent;
   border-right: 18px solid transparent;
-  border-top: 30px solid var(--indigo-700);
+  border-top: 30px solid #4f39f6;
+
   filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.25));
   z-index: 10;
 }
@@ -327,6 +285,6 @@ canvas {
   margin-top: 2rem;
   font-size: 1.5rem;
   font-weight: 600;
-  color: var(--zinc-800);
+  color: #27272a;
   letter-spacing: 0.5px;
 }
